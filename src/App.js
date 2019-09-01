@@ -36,22 +36,28 @@ class App extends React.Component{
           <View style={styles.buttons}>
             {
               this.props.weather.length >= 1 ? 
+              <View style={{padding: 5}}>
               <Button
-                style={styles.button}
-                title = "Prev"
+                style={{padding:2}}
+                title = "<Prev"
                 onPress={() => this.onPressGetWeather()} 
-              /> : 
+              /> 
+              </View>
+              : 
+              <View style={{padding: 5}}>
               <Button
                 style={styles.buttons}
                 title = "Show"
                 onPress={() => this.onPressGetWeather()} 
               />
+              </View>
 
             }
               {
                 this.props.weather.length >= 1 ? 
-                (<Button title = "Close" onPress={() => this.onPressCloseWeather()} />,
-                <Button title = "Next" onPress={() => this.onPressNextWeather()} />)
+                <View style={{padding: 5}}>
+                  <Button title = "Next>" onPress={() => this.onPressNextWeather()}/>
+                </View>
                 : null
               }
           </View>

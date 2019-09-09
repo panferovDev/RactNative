@@ -9,7 +9,7 @@ class App extends React.Component{
   onPressGetWeather(){
     this.props.fetchWeather('https://www.metoffice.gov.uk/pub/data/weather/uk/climate/stationdata/bradforddata.txt')
   }
-  //сбросить стейты на дефолт
+  //сбросить стейты на дефолт.
   onPressCloseWeather(){
     this.props.closeWeather('Closed')
   }
